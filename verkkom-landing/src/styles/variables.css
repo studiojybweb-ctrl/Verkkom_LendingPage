@@ -1,0 +1,19 @@
+:root {
+  /* Colores Oficiales */
+  --vk-deep-blue: #164075;    /* Classic Blue */
+  --vk-royal-blue: #2d6ab0;   /* Azul Secundario */
+  --vk-sky-blue: #37a4dc;     /* Azul Acento */
+  --vk-vibrant-green: #02f695; /* Verde Vibrante */
+  
+  /* Fondos y Texto */
+  --vk-bg-light: #f8fafc;
+  --vk-white: #ffffff;
+  --vk-text: #0f172a;
+  --vk-text-muted: #64748b;
+
+  /* Sombras y Bordes */
+  --shadow-card: 0 10px 25px -5px rgba(22, 64, 117, 0.1);
+  --shadow-hover: 0 20px 48px -12px rgba(22, 64, 117, 0.2);
+  --radius-lg: 20px;
+  --radius-md: 12px;
+}

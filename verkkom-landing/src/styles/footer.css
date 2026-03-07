@@ -1,0 +1,150 @@
+.vk-footer-final {
+  background-color: #164075; /* El azul profundo que le da autoridad */
+  color: #ffffff;
+  padding: 80px 10% 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* El detalle "bonito": una línea de luz verde neón arriba */
+.footer-top-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #02f695, transparent);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo del Logo en el Footer */
+.logo-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.v-bold {
+  background-color: #02f695;
+  color: #164075;
+  font-weight: 900;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+.v-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.brand-tagline {
+  opacity: 0.7;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+/* Social Pills */
+.social-pills {
+  display: flex;
+  gap: 12px;
+}
+
+.social-pill {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-pill:hover {
+  background: #02f695;
+  color: #164075;
+  transform: translateY(-5px);
+}
+
+/* Grupos de Links */
+.footer-links-group h4 {
+  color: #02f695; /* Títulos en verde para que resalten */
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.footer-links-group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links-group li {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links-group a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.footer-links-group a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Firma de Studio JYB */
+.footer-signature {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.signature-line {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+.footer-signature p {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+.footer-signature strong {
+  color: #02f695;
+}
+
+/* Responsivo para móviles/tablets */
+@media (max-width: 992px) {
+  .vk-features-dark {
+    padding: 100px 5%;
+  }
+  .features-header h2 {
+    font-size: 3rem;
+  }
+  .feature-card {
+    padding: 40px 30px;
+  }
+}

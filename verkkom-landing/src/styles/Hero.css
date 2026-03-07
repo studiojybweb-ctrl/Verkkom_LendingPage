@@ -1,0 +1,51 @@
+/* src/styles/Hero.css */
+
+.hero-section {
+  width: 100%;
+  min-height: 85vh;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, var(--vk-deep-blue) 0%, var(--vk-royal-blue) 100%);
+  color: var(--vk-white);
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  /* El secreto: Letras unidas (-0.03) y líneas con espacio (1.1) */
+  line-height: 1.1; 
+  letter-spacing: -0.04em; 
+  margin-bottom: 24px;
+}
+
+.text-highlight {
+  color: var(--vk-vibrant-green); /* El verde neón oficial */
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  /* Interlineado abierto para que no se vea "pesado" */
+  line-height: 1.7; 
+  letter-spacing: 0.01em;
+  opacity: 0.95;
+  max-width: 550px;
+  /* EL ESPACIO CLAVE: Separa el texto de los botones */
+  margin-bottom: 50px; 
+}
+
+.hero-btns {
+  display: flex;
+  /* Espacio generoso entre los dos botones */
+  gap: 20px; 
+  align-items: center;
+}

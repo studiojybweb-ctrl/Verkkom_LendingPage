@@ -1,0 +1,25 @@
+/* src/App.css */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.vk-app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* Reset de links para el Header y Footer */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+} 

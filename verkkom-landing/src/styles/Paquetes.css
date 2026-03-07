@@ -1,0 +1,202 @@
+/* src/styles/Paquetes.css */
+
+.vk-pricing-section {
+  padding: 100px 10%;
+  background-color: #0e1f3b; /* El azul profundo de Verkkom */
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+/* --- ENCABEZADO (Header) --- */
+.pricing-header {
+  margin-bottom: 70px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* El efecto neón con la estrella */
+.pricing-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #02f695; /* Verde neón oficial */
+  margin-bottom: 20px;
+}
+
+.pricing-tag span {
+  font-weight: 900;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.sparkle-icon {
+  filter: drop-shadow(0 0 5px rgba(2, 246, 149, 0.5));
+}
+
+.pricing-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
+}
+
+.pricing-header h2 span {
+  color: #37a4dc; /* Azul acento para "Conexión" */
+}
+
+.pricing-subtitle {
+  color: #f1f5f9;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- GRID DE PAQUETES --- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- ESTILOS INTERNOS DE LA CARD (UI) --- */
+.vk-pricing-section .vk-card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Diseño del Precio */
+.price {
+  font-size: 4rem;
+  font-weight: 900;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 5px;
+  letter-spacing: -2px;
+}
+
+.price span:first-child {
+  font-size: 1.5rem;
+  margin-right: 4px;
+  color: #02f695;
+  font-weight: 700;
+}
+
+.price span:last-child {
+  font-size: 1rem;
+  opacity: 0.5;
+  font-weight: 500;
+  margin-left: 5px;
+  letter-spacing: 0;
+}
+
+.speed {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #37a4dc;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Lista de Características */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 45px 0;
+  text-align: left;
+}
+
+.features li {
+  font-size: 0.95rem;
+  color: #f1f5f9;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.9;
+}
+
+.features li strong {
+  color: #02f695;
+}
+
+.features li svg {
+  color: #02f695;
+  flex-shrink: 0;
+}
+
+/* --- BOTÓN DE CATÁLOGO INTEGRADO --- */
+.pricing-footer-connected {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pricing-footer-connected p {
+  font-size: 1rem;
+  color: #f1f5f9;
+  opacity: 0.5;
+  font-weight: 500;
+}
+
+.minimal-catalog-btn {
+  background: transparent;
+  border: 1px solid rgba(55, 164, 220, 0.3);
+  color: #37a4dc;
+  padding: 14px 45px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.minimal-catalog-btn:hover {
+  background: rgba(55, 164, 220, 0.05);
+  border-color: #37a4dc;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(55, 164, 220, 0.15);
+}
+
+.arrow-move {
+  transition: transform 0.3s ease;
+}
+
+.minimal-catalog-btn:hover .arrow-move {
+  transform: translateX(6px);
+}
+
+/* --- UTILIDADES --- */
+.mt-auto {
+  margin-top: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .vk-pricing-section {
+    padding: 80px 5%;
+  }
+  .pricing-header h2 {
+    font-size: 2.5rem;
+  }
+  .price {
+    font-size: 3rem;
+  }
+}

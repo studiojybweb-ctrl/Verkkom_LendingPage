@@ -1,0 +1,86 @@
+/* src/styles/Beneficios.css */
+
+.vk-features-dark {
+  padding: 120px 10%;
+  background-color: #0e1f3b; /* Fondo azul profundo */
+  color: #ffffff;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.features-tag {
+  color: #02f695;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.features-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-top: 20px;
+  letter-spacing: -0.04em;
+}
+
+.features-header h2 span {
+  color: #37a4dc;
+}
+
+/* El grid ahora solo controla el diseño de las columnas */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* --- Estilos internos de la Card en Beneficios --- */
+
+.feature-icon {
+  color: #164075;
+  background: white;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto que conecta con el hover de la Card */
+.benefit-card-adjust:hover .feature-icon {
+  background: #164075;
+  color: #02f695;
+  transform: scale(1.1);
+}
+
+.benefit-card-adjust h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.benefit-card-adjust p {
+  font-size: 1rem;
+  color: #f1f5f9;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* Responsivo para móviles/tablets */
+@media (max-width: 992px) {
+  .vk-features-dark {
+    padding: 100px 5%;
+  }
+  .features-header h2 {
+    font-size: 3rem;
+  }
+  .feature-card {
+    padding: 40px 30px;
+  }
+}
