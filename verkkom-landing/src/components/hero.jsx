@@ -1,35 +1,49 @@
 import React from 'react';
-import { Button } from '../ui/Button'; // Importamos tu componente de UI
-import { ArrowRight } from 'lucide-react';
+import { Button } from '../ui/Button';
+import { ArrowRight, MapPin } from 'lucide-react';
 import '../styles/Hero.css';
 
 export function Hero() {
+  const handleContratarGeneral = () => {
+    // IMPORTANTE: Sin espacios para que funcione en todos los navegadores
+    const telefono = "5218123921000";
+    const mensaje = "¡Hola Verkkom! Vengo de su sitio web y me interesa contratar su servicio de internet. ¿Me podrían dar más información?";
+
+    // Codificamos el mensaje para que sea válido en una URL
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, '_blank');
+  };
+
   return (
-    <section className="hero-section">
+    <section className="vk-hero">
+      <div className="hero-overlay"></div> {/* Capa de oscuridad extra */}
+
       <div className="hero-container">
-        <div className="hero-text">
-          <h1>
-            Internet de alta velocidad en <br />
-            <span className="text-highlight">Nuevo León.</span>
+        <div className="hero-content">
+          <h1 className="hero-title">
+            Internet de alta velocidad en <span>Nuevo León.</span>
           </h1>
-          <p>
-            Conectamos tu mundo, sin límites. <strong>Verkkom:</strong> rapidez para 
+
+          <p className="hero-description">
+            Conectamos tu mundo, sin límites. <strong>Verkkom</strong>: rapidez para
             hogares y empresas industriales donde otros no llegan.
           </p>
-          <div className="hero-btns">
-            <Button variant="primary">
-              Contratar Ahora <ArrowRight size={18} />
+
+          <div className="hero-actions">
+            <Button variant="primary" onClick={handleContratarGeneral} className="btn-hero-main">
+              Contratar Ahora <ArrowRight size={20} />
             </Button>
-            <Button variant="outline">
-              Ver Cobertura
+
+            <Button variant="outline" className="btn-hero-sec">
+              <MapPin size={18} /> Ver Cobertura
             </Button>
           </div>
         </div>
-        {/* Espacio para la imagen del render (antena/montañas) */}
-        <div className="hero-visual">
-          <img src="/src/assets/img/hero-visual.png" alt="Verkkom Conectividad" />
-        </div>
       </div>
+
+      {/* Decoración inferior para conectar con la siguiente sección */}
+      <div className="hero-bottom-gradient"></div>
     </section>
   );
 }

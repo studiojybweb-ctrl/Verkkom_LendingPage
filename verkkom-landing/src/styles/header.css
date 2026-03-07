@@ -1,48 +1,80 @@
+/* src/styles/Header.css */
+
 .vk-header {
-  width: 100%;
-  background: white;
-  padding: 15px 5%;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  /* AJUSTE FINO: De 25px bajamos a 18px para un look más estilizado */
+  padding: 18px 0;
+
+  /* Efecto Glassmorphism (se mantiene para el toque tech) */
+  background: rgba(14, 31, 59, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto al hacer scroll: un poco más compacto aún */
+.vk-header.scrolled {
+  padding: 12px 0;
+  background: rgba(14, 31, 59, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- LOGO (Ajuste de tamaño proporcional) --- */
+.logo-v {
+  font-size: 1.8rem;
+  /* Bajamos de 2rem a 1.8rem */
+  font-weight: 900;
+  color: #02f695;
 }
 
 .logo-text {
-  font-size: 24px;
-  font-weight: 900;
-  color: #164075; /* Classic Blue */
+  font-size: 1.35rem;
+  /* Bajamos de 1.5rem a 1.35rem */
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
 
+/* --- NAVEGACIÓN --- */
 .nav-menu {
   display: flex;
   gap: 30px;
+  /* Reducimos un poco el espacio entre links */
 }
 
 .nav-menu a {
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  color: #164075;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.9rem;
+  /* Un pelín más chico para el look minimal */
+  transition: all 0.3s ease;
 }
 
-/* Responsivo para móviles/tablets */
-@media (max-width: 992px) {
-  .vk-features-dark {
-    padding: 100px 5%;
-  }
-  .features-header h2 {
-    font-size: 3rem;
-  }
-  .feature-card {
-    padding: 40px 30px;
-  }
+.nav-menu a:hover {
+  color: #02f695;
+  transform: translateY(-1px);
+}
+
+/* --- BOTÓN --- */
+.btn-header {
+  padding: 8px 22px !important;
+  /* Más compacto */
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
 }

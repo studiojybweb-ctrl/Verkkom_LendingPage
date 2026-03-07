@@ -1,34 +1,51 @@
 /* src/styles/Catalogo.css */
 
 .vk-catalogo-page {
-  background-color: #0e1f3b; /* Azul profundo oficial */
+  background-color: #0e1f3b;
   min-height: 100vh;
-  padding: 40px 10% 100px;
+
+  /* --- SOLUCIÓN AL BOTÓN PERDIDO --- */
+  /* El header mide aprox 80px. Damos 100px para que el botón aparezca libre */
+  padding: 100px 10% 100px;
   color: #ffffff;
 }
 
-/* --- Navegación y Hero --- */
 .back-nav {
   max-width: 1400px;
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
+  /* Espacio entre el botón y el título */
+  position: relative;
+  z-index: 10;
+  /* Asegura que el botón esté por encima de cualquier overlay */
 }
 
 .back-btn {
-  background: transparent;
-  border: none;
+  background: rgba(55, 164, 220, 0.1);
+  /* Un fondo sutil para que se vea más */
+  border: 1px solid rgba(55, 164, 220, 0.2);
   color: #37a4dc;
+  padding: 10px 20px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   cursor: pointer;
   font-weight: 700;
-  transition: transform 0.2s;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
 }
 
-.back-btn:hover { transform: translateX(-5px); }
+.back-btn:hover {
+  background: rgba(55, 164, 220, 0.2);
+  transform: translateX(-5px);
+  /* Animación de retroceso */
+  color: #ffffff;
+}
 
+/* Ajuste del título para que no quede muy pegado al botón */
 .catalogo-hero {
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 60px;
 }
 
@@ -55,7 +72,9 @@
   margin-bottom: 15px;
 }
 
-.catalogo-hero h1 span { color: #02f695; }
+.catalogo-hero h1 span {
+  color: #02f695;
+}
 
 /* --- Barra de Filtros --- */
 .filter-container {
@@ -86,7 +105,8 @@
 /* --- Grid y Cards (Corrección del efecto aplastado) --- */
 .catalogo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Más ancho para evitar aplastamiento */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  /* Más ancho para evitar aplastamiento */
   gap: 35px;
   max-width: 1400px;
   margin: 0 auto;
@@ -94,8 +114,10 @@
 
 .catalogo-card-visual {
   padding: 0 !important;
-  overflow: visible !important; /* IMPORTANTE: Para que los badges no se corten */
-  min-height: 540px; /* Altura mínima para que respire el contenido */
+  overflow: visible !important;
+  /* IMPORTANTE: Para que los badges no se corten */
+  min-height: 540px;
+  /* Altura mínima para que respire el contenido */
   display: flex;
   flex-direction: column;
 }
@@ -148,24 +170,56 @@
   align-items: baseline;
 }
 
-.cat-price span { color: #02f695; font-size: 1.5rem; margin-right: 4px; } /* Símbolo $ neón */
+.cat-price span {
+  color: #02f695;
+  font-size: 1.5rem;
+  margin-right: 4px;
+}
+
+/* Símbolo $ neón */
 
 .cat-speed {
-  color: #37a4dc; /* Azul acento */
+  color: #37a4dc;
+  /* Azul acento */
   font-weight: 800;
   margin-bottom: 25px;
   text-transform: uppercase;
 }
 
-.cat-list { list-style: none; padding: 0; margin-bottom: 35px; }
-.cat-list li { font-size: 0.95rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; opacity: 0.85; }
-.cat-list li svg { color: #02f695; }
+.cat-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+}
 
-.mt-auto { margin-top: auto; }
+.cat-list li {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.85;
+}
+
+.cat-list li svg {
+  color: #02f695;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .catalogo-hero h1 { font-size: 2.5rem; }
-  .vk-catalogo-page { padding: 40px 5%; }
-  .catalogo-grid { grid-template-columns: 1fr; }
+  .catalogo-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .vk-catalogo-page {
+    padding: 40px 5%;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+  }
 }
